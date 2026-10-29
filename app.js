@@ -28,7 +28,7 @@
   };
   const CABINET_SHELF_IMAGES = {"15|C":"data/upload_inv/Schrankbilder/schrank15_FachC.jpg","9|G":"data/upload_inv/Schrankbilder/schrank9_FachG.jpg","3|B":"data/upload_inv/Schrankbilder/schrank3_FachB.jpg.jpg","27.1|A":"data/upload_inv/Schrankbilder/schrank27.1_FachA.jpg","27.1|E":"data/upload_inv/Schrankbilder/schrank27.1_FachE.jpg","4|C":"data/upload_inv/Schrankbilder/schrank4_FachC.jpg","10|D":"data/upload_inv/Schrankbilder/schrank10_FachD.jpg","10|B":"data/upload_inv/Schrankbilder/schrank10_FachB.jpg","25.1|E":"data/upload_inv/Schrankbilder/schrank25.1_FachE.jpg","12|E":"data/upload_inv/Schrankbilder/schrank12_FachE.jpg","28.2|C":"data/upload_inv/Schrankbilder/schrank28.2_FachC.jpg","1|C":"data/upload_inv/Schrankbilder/schrank1_FachC.jpg","15|E":"data/upload_inv/Schrankbilder/schrank15_FachE.jpg","1|B":"data/upload_inv/Schrankbilder/schrank1_FachB.jpg","20|A":"data/upload_inv/Schrankbilder/schrank20_FachA.jpg","20|F":"data/upload_inv/Schrankbilder/schrank20_FachF.jpg","2|C":"data/upload_inv/Schrankbilder/schrank2_FachC.jpg","4|A":"data/upload_inv/Schrankbilder/schrank4_FachA.jpg","25.2|F":"data/upload_inv/Schrankbilder/schrank25.2_FachF.jpg","3|E":"data/upload_inv/Schrankbilder/schrank3_FachE.jpg.jpg","25.2|C":"data/upload_inv/Schrankbilder/schrank25.2_FachC.jpg","15|A":"data/upload_inv/Schrankbilder/schrank15_FachA.jpg","9|D":"data/upload_inv/Schrankbilder/schrank9_FachD.jpg","25.1|F":"data/upload_inv/Schrankbilder/schrank25.1_FachF.jpg","8|D":"data/upload_inv/Schrankbilder/schrank8_FachD.jpg","18|B":"data/upload_inv/Schrankbilder/schrank18_FachB.jpg","9|A":"data/upload_inv/Schrankbilder/schrank9_FachA.jpg","19|F":"data/upload_inv/Schrankbilder/schrank19_FachF.jpg","12|C":"data/upload_inv/Schrankbilder/schrank12_FachC.jpg","27.2|E":"data/upload_inv/Schrankbilder/schrank27.2_FachE.jpg","21|F":"data/upload_inv/Schrankbilder/schrank21_FachF.jpg","28.1|D":"data/upload_inv/Schrankbilder/schrank28.1_FachD.jpg","12|B":"data/upload_inv/Schrankbilder/schrank12_FachB.jpg","8|A":"data/upload_inv/Schrankbilder/schrank8_FachA.jpg","6|F":"data/upload_inv/Schrankbilder/schrank6_FachF.jpg","13|C":"data/upload_inv/Schrankbilder/schrank13_FachC.jpg","26.2|D":"data/upload_inv/Schrankbilder/schrank26.2_FachD.jpg","7|C":"data/upload_inv/Schrankbilder/schrank7_FachC.jpg","14|B":"data/upload_inv/Schrankbilder/schrank14_FachB.jpg","17|D":"data/upload_inv/Schrankbilder/schrank17_FachD.jpg","5|B":"data/upload_inv/Schrankbilder/schrank5_fachB.jpg","19|C":"data/upload_inv/Schrankbilder/schrank19_FachC.jpg","28.1|A":"data/upload_inv/Schrankbilder/schrank28.1_FachA.jpg","20|D":"data/upload_inv/Schrankbilder/schrank20_FachD.jpg","27.1|C":"data/upload_inv/Schrankbilder/schrank27.1_FachC.jpg","10|E":"data/upload_inv/Schrankbilder/schrank10_FachE.jpg","5|D":"data/upload_inv/Schrankbilder/schrank5_fachD.jpg","5|C":"data/upload_inv/Schrankbilder/schrank5_FachC.jpg","26.1|D":"data/upload_inv/Schrankbilder/schrank26.1_FachD.jpg","11|D":"data/upload_inv/Schrankbilder/schrank11_FachD.jpg","13|B":"data/upload_inv/Schrankbilder/schrank13_FachB.jpg","5|A":"data/upload_inv/Schrankbilder/schrank5_fachA.jpg","25.1|A":"data/upload_inv/Schrankbilder/schrank25.1_FachA.jpg","28.1|B":"data/upload_inv/Schrankbilder/schrank28.1_FachB.jpg","2|B":"data/upload_inv/Schrankbilder/schrank2_FachB.jpg","18|A":"data/upload_inv/Schrankbilder/schrank18_FachA.jpg","16|A":"data/upload_inv/Schrankbilder/schrank16_FachA.jpg","10|C":"data/upload_inv/Schrankbilder/schrank10_FachC.jpg","13|F":"data/upload_inv/Schrankbilder/schrank13_FachF.jpg","26.1|E":"data/upload_inv/Schrankbilder/schrank26.1_FachE.jpg","9|C":"data/upload_inv/Schrankbilder/schrank9_FachC.jpg","25.2|E":"data/upload_inv/Schrankbilder/schrank25.2_FachE.jpg","25.1|C":"data/upload_inv/Schrankbilder/schrank25.1_FachC.jpg","28.2|E":"data/upload_inv/Schrankbilder/schrank28.2_FachE.jpg","2|D":"data/upload_inv/Schrankbilder/schrank2_FachD.jpg","27.1|D":"data/upload_inv/Schrankbilder/schrank27.1_FachD.jpg","25.1|D":"data/upload_inv/Schrankbilder/schrank25.1_FachD.jpg","28.2|D":"data/upload_inv/Schrankbilder/schrank28.2_FachD.jpg","28.1|E":"data/upload_inv/Schrankbilder/schrank28.1_FachE.jpg","19|B":"data/upload_inv/Schrankbilder/schrank19_FachB.jpg","17|A":"data/upload_inv/Schrankbilder/schrank17_FachA.jpg","26.1|A":"data/upload_inv/Schrankbilder/schrank26.1_FachA.jpg","4|D":"data/upload_inv/Schrankbilder/schrank4_FachD.jpg","18|C":"data/upload_inv/Schrankbilder/schrank18_FachC.jpg","3|A":"data/upload_inv/Schrankbilder/schrank3_FachA.jpg.jpg","14|D":"data/upload_inv/Schrankbilder/schrank14_FachD.jpg","16|D":"data/upload_inv/Schrankbilder/schrank16_FachD.jpg","5|E":"data/upload_inv/Schrankbilder/schrank5_fachE.jpg","18|E":"data/upload_inv/Schrankbilder/schrank18_FachE.jpg","2|E":"data/upload_inv/Schrankbilder/schrank2_FachE.jpg","1|E":"data/upload_inv/Schrankbilder/schrank1_FachE.jpg","21|D":"data/upload_inv/Schrankbilder/schrank21_FachD.jpg","9|F":"data/upload_inv/Schrankbilder/schrank9_FachF.jpg","27.2|C":"data/upload_inv/Schrankbilder/schrank27.2_FachC.jpg","3|D":"data/upload_inv/Schrankbilder/schrank3_FachD.jpg.jpg","17|B":"data/upload_inv/Schrankbilder/schrank17_FachB.jpg","13|A":"data/upload_inv/Schrankbilder/schrank13_FachA.jpg","20|C":"data/upload_inv/Schrankbilder/schrank20_FachC.jpg","26.1|C":"data/upload_inv/Schrankbilder/schrank26.1_FachC.jpg","2|A":"data/upload_inv/Schrankbilder/schrank2_FachA.jpg","1|A":"data/upload_inv/Schrankbilder/schrank1_FachA.jpg","28.2|B":"data/upload_inv/Schrankbilder/schrank28.2_FachB.jpg","20|E":"data/upload_inv/Schrankbilder/schrank20_FachE.jpg","25.2|B":"data/upload_inv/Schrankbilder/schrank25.2_FachB.jpg","27.2|A":"data/upload_inv/Schrankbilder/schrank27.2_FachA.jpg","4|F":"data/upload_inv/Schrankbilder/schrank4_FachF.jpg","9|E":"data/upload_inv/Schrankbilder/schrank9_FachE.jpg","17|E":"data/upload_inv/Schrankbilder/schrank17_FachE.jpg","15|D":"data/upload_inv/Schrankbilder/schrank15_FachD.jpg","27.1|B":"data/upload_inv/Schrankbilder/schrank27.1_FachB.jpg","27.2|D":"data/upload_inv/Schrankbilder/schrank27.2_FachD.jpg","27.1|F":"data/upload_inv/Schrankbilder/schrank27.1_FachF.jpg","19|E":"data/upload_inv/Schrankbilder/schrank19_FachE.jpg","14|A":"data/upload_inv/Schrankbilder/schrank14_FachA.jpg","16|B":"data/upload_inv/Schrankbilder/schrank16_FachB.jpg","8|E":"data/upload_inv/Schrankbilder/schrank8_FachE.jpg","7|E":"data/upload_inv/Schrankbilder/schrank7_FachE.jpg","15|B":"data/upload_inv/Schrankbilder/schrank15_FachB.jpg","13|D":"data/upload_inv/Schrankbilder/schrank13_FachD.jpg","20|B":"data/upload_inv/Schrankbilder/schrank20_FachB.jpg","3|C":"data/upload_inv/Schrankbilder/schrank3_FachC.jpg.jpg","12|D":"data/upload_inv/Schrankbilder/schrank12_FachD.jpg","7|A":"data/upload_inv/Schrankbilder/schrank7_FachA.jpg","14|F":"data/upload_inv/Schrankbilder/schrank14_FachF.jpg","19|A":"data/upload_inv/Schrankbilder/schrank19_FachA.jpg","9|B":"data/upload_inv/Schrankbilder/schrank9_FachB.jpg","25.1|B":"data/upload_inv/Schrankbilder/schrank25.1_FachB.jpg","27.2|F":"data/upload_inv/Schrankbilder/schrank27.2_FachF.jpg","6|D":"data/upload_inv/Schrankbilder/schrank6_FachD.jpg","25.2|A":"data/upload_inv/Schrankbilder/schrank25.2_FachA.jpg","26.2|B":"data/upload_inv/Schrankbilder/schrank26.2_FachB.jpg","6|B":"data/upload_inv/Schrankbilder/schrank6_FachB.jpg","26.2|E":"data/upload_inv/Schrankbilder/schrank26.2_FachE.jpg","26.2|C":"data/upload_inv/Schrankbilder/schrank26.2_FachC.jpg","21|B":"data/upload_inv/Schrankbilder/schrank21_FachB.jpg","17|F":"data/upload_inv/Schrankbilder/schrank17_FachF.jpg","7|D":"data/upload_inv/Schrankbilder/schrank7_FachD.jpg","26.1|B":"data/upload_inv/Schrankbilder/schrank26.1_FachB.jpg","21|A":"data/upload_inv/Schrankbilder/schrank21_FachA.jpg","8|B":"data/upload_inv/Schrankbilder/schrank8_FachB.jpg","8|C":"data/upload_inv/Schrankbilder/schrank8_FachC.jpg","26.1|F":"data/upload_inv/Schrankbilder/schrank26.1_FachF.jpg","11|A":"data/upload_inv/Schrankbilder/schrank11_FachA.jpg","14|C":"data/upload_inv/Schrankbilder/schrank14_FachC.jpg","21|C":"data/upload_inv/Schrankbilder/schrank21_FachC.jpg","21|E":"data/upload_inv/Schrankbilder/schrank21_FachE.jpg","7|B":"data/upload_inv/Schrankbilder/schrank7_FachB.jpg","10|A":"data/upload_inv/Schrankbilder/schrank10_FachA.jpg","6|C":"data/upload_inv/Schrankbilder/schrank6_FachC.jpg","18|D":"data/upload_inv/Schrankbilder/schrank18_FachD.jpg","14|E":"data/upload_inv/Schrankbilder/schrank14_FachE.jpg","6|E":"data/upload_inv/Schrankbilder/schrank6_FachE.jpg","11|E":"data/upload_inv/Schrankbilder/schrank11_FachE.jpg","1|D":"data/upload_inv/Schrankbilder/schrank1_FachD.jpg","28.2|A":"data/upload_inv/Schrankbilder/schrank28.2_FachA.jpg","16|C":"data/upload_inv/Schrankbilder/schrank16_FachC.jpg","4|E":"data/upload_inv/Schrankbilder/schrank4_FachE.jpg","19|D":"data/upload_inv/Schrankbilder/schrank19_FachD.jpg","11|B":"data/upload_inv/Schrankbilder/schrank11_FachB.jpg","27.2|B":"data/upload_inv/Schrankbilder/schrank27.2_FachB.jpg","26.2|A":"data/upload_inv/Schrankbilder/schrank26.2_FachA.jpg","12|A":"data/upload_inv/Schrankbilder/schrank12_FachA.jpg","6|A":"data/upload_inv/Schrankbilder/schrank6_FachA.jpg","26.2|F":"data/upload_inv/Schrankbilder/schrank26.2_FachF.jpg","4|B":"data/upload_inv/Schrankbilder/schrank4_FachB.jpg","11|C":"data/upload_inv/Schrankbilder/schrank11_FachC.jpg","25.2|D":"data/upload_inv/Schrankbilder/schrank25.2_FachD.jpg","8|F":"data/upload_inv/Schrankbilder/schrank8_FachF.jpg","28.1|C":"data/upload_inv/Schrankbilder/schrank28.1_FachC.jpg","17|C":"data/upload_inv/Schrankbilder/schrank17_FachC.jpg"};
   const $ = id => document.getElementById(id);
-  const state = { view: "experimente", records: {}, originals: {}, changed: {}, selectedId: null, isNew: false, search: "" };
+  const state = { view: "sammlungsplan", homeSearch: false, records: {}, originals: {}, changed: {}, selectedId: null, isNew: false, search: "" };
   const storageKey = view => `physiksammlung-js-v1:${view}`;
   const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const text = value => String(value ?? "").trim();
@@ -157,13 +157,16 @@
     const s=text(value).replace(/&&&/g," · ");
     return s.length>max ? s.slice(0,max-1)+"…" : s;
   }
+
   function renderSammlungsplan(cabinetToShow = null) {
     const cabinets = [
       ["3","4","9","10","15","16","21","22"],
       ["2","5","8","11","14","17","20","23"],
       ["1","6","7","12","13","18","19","24"]
     ];
-    const cabinetButton = n => `<td><button type="button" class="plan-cabinet" data-cabinet="${n}">Schrank ${n}</button></td>`;
+    const cabinetButton = (n, label = "") => `<td><button type="button" class="plan-cabinet" data-cabinet="${n}"><span>Schrank ${n}</span> ${label ? `<small>${label} </small>`: ""}
+
+</button></td>`;
     const row2 = cabinets[1].map(cabinetButton).join("");
     const row3 = cabinets[2].map(cabinetButton).join("");
     const lower = ["30","29","28.2","28.1","27.2","27.1","26.2","26.1","25.2","25.1"];
@@ -171,10 +174,13 @@
     $("pageSubtitle").textContent = cabinetToShow === null
       ? "Lageplan der Sammlung. Einen Schrank anklicken, um den Inhalt nach Regalfächern sortiert anzuzeigen."
       : "Inventar nach Regalfächern sortiert; rechts ist das zugehörige Fachbild zu sehen.";
-    $("searchInput").placeholder = cabinetToShow === null ? "Schrank im Übersichtsplan auswählen …" : "In dieser Sammlung suchen …";
+    $("searchInput").placeholder = "Inventar im Übersichtsplan suchen …";
     $("newBtn").hidden = true;
 
     if (cabinetToShow !== null) {
+      // Die Planseite bleibt hinter dem Schrankdialog sichtbar.
+      $("pageTitle").textContent = "Übersichtsplan";
+      $("pageSubtitle").textContent = "Lageplan der Sammlung. Einen Schrank anklicken, um den Inhalt nach Regalfächern sortiert anzuzeigen.";
       const shelfOrder = ["drauf", "A", "B", "C", "D", "E", "F", "G"];
       const inventory = (state.records.inventar || []).filter(r => text(r.Schrank).trim() === String(cabinetToShow));
       const byShelf = new Map();
@@ -187,7 +193,6 @@
         ...shelfOrder.filter(s => byShelf.has(s)),
         ...Array.from(byShelf.keys()).filter(s => !shelfOrder.some(x => x.toLocaleLowerCase("de") === s.toLocaleLowerCase("de"))).sort((a,b)=>a.localeCompare(b,"de",{numeric:true}))
       ];
-      $("resultCount").textContent = `${inventory.length} Einträge · ${shelves.length} Fächer`;
       const shelfHtml = shelves.map(shelf => {
         const rows = (byShelf.get(shelf) || []).slice().sort((a,b)=>text(a.Inventar).localeCompare(text(b.Inventar),"de"));
         const imageKey = `${String(cabinetToShow).toLowerCase()}|${String(shelf).toUpperCase()}`;
@@ -200,25 +205,81 @@
           : `<div class="shelf-photo-missing">Kein Fachbild vorhanden</div>`;
         return `<section class="shelf-panel"><div class="shelf-list"><h2>Fach ${escapeHtml(shelf)}</h2>${itemHtml}</div><div class="shelf-image">${imageHtml}</div></section>`;
       }).join("");
-      $("content").innerHTML = `<div class="cabinet-detail"><div class="cabinet-detail-head"><button type="button" class="secondary" id="backToPlan">← Zurück zum Übersichtsplan</button><span>Schrank ${escapeHtml(cabinetToShow)} · ${inventory.length} Inventareinträge</span></div>${inventory.length ? shelfHtml : `<div class="empty-state"><strong>Keine Inventareinträge gefunden</strong>In der CSV sind für Schrank ${escapeHtml(cabinetToShow)} keine passenden Datensätze vorhanden.</div>`}</div>`;
-      $("backToPlan").addEventListener("click", () => renderSammlungsplan());
-      $("content").querySelectorAll("[data-inventory-key]").forEach(btn => btn.addEventListener("click", () => {
+      let dialog = $("cabinetDialog");
+      if (!dialog) {
+        dialog = document.createElement("dialog");
+        dialog.id = "cabinetDialog";
+        dialog.className = "cabinet-detail-dialog";
+        document.body.appendChild(dialog);
+        dialog.addEventListener("close", () => {
+          if (!state.homeSearch) {
+            state.view = "sammlungsplan";
+            render();
+          }
+        });
+      }
+      dialog.innerHTML = `<div class="cabinet-dialog-head"><div><h2>Schrank ${escapeHtml(cabinetToShow)}</h2><p>${inventory.length} Inventareinträge · nach Regalfächern sortiert</p></div><button type="button" class="icon-button" id="closeCabinetDialog" aria-label="Schrankansicht schließen">×</button></div><div class="cabinet-dialog-body">${inventory.length ? shelfHtml : `<div class="empty-state"><strong>Keine Inventareinträge gefunden</strong>In der CSV sind für Schrank ${escapeHtml(cabinetToShow)} keine passenden Datensätze vorhanden.</div>`}</div>`;
+      $("closeCabinetDialog").addEventListener("click", () => dialog.close());
+      dialog.querySelectorAll("[data-inventory-key]").forEach(btn => btn.addEventListener("click", () => {
+        const key = btn.dataset.inventoryKey;
         state.view = "inventar";
+        state.homeSearch = false;
         state.search = "";
         $("searchInput").value = "";
         render();
-        openDetails(btn.dataset.inventoryKey);
+        openDetails(key);
       }));
+      if (!dialog.open) dialog.showModal();
       return;
     }
 
+
+//ÜBERSICHTSPLAN
     $("resultCount").textContent = "30 Schrankbereiche";
     $("content").innerHTML = `<div class="plan-wrap"><table class="collection-plan" aria-label="Übersichtsplan der Physiksammlung"><tbody>
-      <tr class="plan-cabinet-row">${cabinetButton("3")}${cabinetButton("4")}<td class="plan-aisle" rowspan="4">Gang 1</td>${cabinetButton("9")}${cabinetButton("10")}<td class="plan-aisle" rowspan="4" colspan="2">Gang 2</td>${cabinetButton("15")}${cabinetButton("16")}<td class="plan-aisle" rowspan="4" colspan="2">Gang 3</td>${cabinetButton("21")}${cabinetButton("22")}<td class="plan-aisle" rowspan="4">Gang 4</td></tr>
-      <tr class="plan-cabinet-row">${row2}</tr><tr class="plan-cabinet-row">${row3}</tr>
+      <tr class="plan-cabinet-row">	
+${cabinetButton("3","Wärme-\n lehre(2)")}
+<td class="plan-aisle" rowspan="4">Gang 1</td>
+${cabinetButton("4","Rotation")}${cabinetButton("9","Elektronik")}
+<td class="plan-aisle" rowspan="4" colspan="3">Gang 2</td>
+${cabinetButton("10","dig. El.")}${cabinetButton("15","el. magn. Wellen")}
+<td class="plan-aisle" rowspan="4" colspan="3">Gang 3</td>
+${cabinetButton("16", "Astronomie\n Röntgen")}${cabinetButton("21","Beugung")}
+<td class="plan-aisle" rowspan="4">Gang 4</td>${cabinetButton("22","Kollegen")}
+</tr>   
+ <tr class="plan-cabinet-row">	
+${cabinetButton("2","Wärme-\n lehre(1)")}
+${cabinetButton("5","Kraft&\n Impuls")}${cabinetButton("8","bew. Ladungen")}
+${cabinetButton("11","Influenz")}${cabinetButton("14","Resonanz")}
+${cabinetButton("17", "Kernphysik")}${cabinetButton("20","Optik")}
+${cabinetButton("22","Bastel-\n schrank(2)")}
+</tr>
+   <tr class="plan-cabinet-row">	
+${cabinetButton("1","Stativmaterial")}
+${cabinetButton("6","Bewegungen")}${cabinetButton("7","Elektro-\n statik")}
+${cabinetButton("12","Magnetismus")}${cabinetButton("13","Schwingungen& \n Wellen")}
+${cabinetButton("18", "Atomphysik")}${cabinetButton("19","Optik")}
+${cabinetButton("24","Bastel-\n schrank(1)")}
+</tr>
+
+<!-- <tr class="plan-cabinet-row">${row3}</tr>-->
       <tr class="plan-label-row"><td>vor Schrank 1</td><td>Exp.-wagen</td><td>Exp.-wagen</td><td>Exp.-wagen</td><td>Exp.-wagen</td><td>Exp.-wagen</td><td>Exp.-wagen</td><td>Werk-bank</td></tr>
       <tr><td colspan="14" class="plan-spacer"></td></tr>
-      <tr class="plan-bottom"><td colspan="2">Sicherungen</td>${cabinetButton("30")}<td>Tür</td><td>Tür</td><td colspan="2">Waschbecken</td>${lower.slice(1).map(cabinetButton).join("")}</tr>
+  <tr class="plan-bottom"><td colspan="2">Sicherungen</td>
+${cabinetButton("30","Exp.-\n anleitungen")}
+<td colspan="2">Tür</td>
+<td colspan="2">Waschbecken</td>
+${cabinetButton("29","Handapparat \n Digitales")}
+${cabinetButton("28.2","Strom/- \n Spannung")}
+${cabinetButton("28.1","Strom/- \n Spannung")}
+${cabinetButton("27.2","digitale\n Messwerterf.")}
+${cabinetButton("27.1","digitale\n Messwerterf.")}
+${cabinetButton("26.2","Messverstärker")}
+${cabinetButton("26.1","Hochspannung")}
+${cabinetButton("25.2","Niederspannung")}
+${cabinetButton("25.1","Niederspannung")}
+<!-- ${lower.slice(1).map(cabinetButton).join("")} -->
+</tr>  
       </tbody></table><p class="plan-hint">Schrank anklicken: Der Inhalt wird nach Regalfächern sortiert angezeigt, jeweils mit dem passenden Fachbild.</p></div>`;
     $("content").querySelectorAll("[data-cabinet]").forEach(btn => btn.addEventListener("click", () => {
       renderSammlungsplan(btn.dataset.cabinet);
@@ -238,7 +299,12 @@
     $("resultCount").textContent=`${filtered.length.toLocaleString("de-DE")} von ${records().length.toLocaleString("de-DE")} Einträgen`;
     $("newBtn").textContent=`＋ Neuer Eintrag`;
     $("saveStatus").textContent=state.changed[state.view] ? "Lokale Änderungen gespeichert" : "Noch keine lokalen Änderungen";
-    document.querySelectorAll(".nav-item").forEach(b=>b.classList.toggle("active",b.dataset.view===state.view));
+    document.querySelectorAll(".nav-item").forEach(b=>b.classList.toggle("active",b.dataset.view===(state.homeSearch ? "sammlungsplan" : state.view)));
+    if (state.homeSearch) {
+      $("pageTitle").textContent = "Inventarsuche";
+      $("pageSubtitle").textContent = "Suchergebnisse aus dem Inventar. Die Suchanfrage bleibt beim Öffnen und Schließen eines Eintrags erhalten.";
+      $("searchInput").placeholder = "Inventar im Übersichtsplan suchen …";
+    }
     if (!filtered.length) {
       $("content").innerHTML=`<div class="empty-state"><strong>Keine Einträge gefunden</strong>Ändere den Suchbegriff oder lege einen neuen Eintrag an.</div>`;
       return;
@@ -388,10 +454,20 @@
   }
   function switchView(view) {
     if(view !== "sammlungsplan" && !DATASETS[view]) return;
-    state.view=view; state.search=""; $("searchInput").value=""; render();
+    state.view=view; state.homeSearch=false; state.search=""; $("searchInput").value=""; render();
   }
   document.querySelectorAll(".nav-item").forEach(b=>b.addEventListener("click",()=>switchView(b.dataset.view)));
-  $("searchInput").addEventListener("input",e=>{state.search=e.target.value;render();});
+  $("searchInput").addEventListener("input",e=>{
+    state.search=e.target.value;
+    if (state.view === "sammlungsplan" && state.search.trim()) {
+      state.homeSearch = true;
+      state.view = "inventar";
+    } else if (state.homeSearch && !state.search.trim()) {
+      state.homeSearch = false;
+      state.view = "sammlungsplan";
+    }
+    render();
+  });
   $("newBtn").addEventListener("click",()=>openEditor());
   $("importFile").addEventListener("change",e=>{if(e.target.files?.length) importCSVFiles(Array.from(e.target.files));});
   $("entryForm").addEventListener("submit",saveForm);
