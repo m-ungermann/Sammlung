@@ -1,5 +1,6 @@
 
-const CACHE_NAME = "physiksammlung-v2";
+/* Offline-Unterstützung für die Physiksammlung */
+const CACHE_NAME = "physiksammlung-v3";
 
 const APP_FILES = [
   "./",
@@ -13,47 +14,49 @@ const APP_FILES = [
 ];
 
 self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(async cache => {
-        // Vorhandene Dateien einzeln zwischenspeichern.
-        // Eine fehlende optionale Datei verhindert nicht
-        // die Installation der gesamten PWA.
-        await Promise.all(
-          APP_FILES.map(async path => {
-            try {
-              const response = await fetch(path);
-              if (response.ok) {
-                await cache.put(path, response);
-              }
-            } catch (error) {
-              console.warn("Nicht zwischengespeichert:", path);
-            }
-          })
-        );
-        await self.skipWaiting();
-      })
-  );
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE_NAME);
+
+    // Wichtige App-Dateien vorab speichern.
+    // Einzelne fehlende Dateien verhindern die Installation nicht.
+    await Promise.allSettled(APP_FILES.map(async path => {
+      try {
+        const url = new URL(path, self.registration.scope).href;
+        const response = await fetch(url, { cache: "reload" });
+
+        if (response.ok && response.type !== "opaque") {
+          await cache.put(url, response);
+        }
+      } catch (error) {
+        console.warn("Datei konnte nicht vorgeladen werden:", path, error);
+      }
+    }));
+
+    await self.skipWaiting();
+  })());
 });
 
 self.addEventListener("activate", event => {
-  event.waitUntil(
-    caches.keys()
-      .then(keys => Promise.all(
-        keys
-          .filter(key =>
-            key.startsWith("physiksammlung-") &&
-            key !== CACHE_NAME
-          )
-          .map(key => caches.delete(key))
-      ))
-      .then(() => self.clients.claim())
-  );
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+
+    await Promise.all(
+      keys
+        .filter(key =>
+          key.startsWith("physiksammlung-") &&
+          key !== CACHE_NAME
+        )
+        .map(key => caches.delete(key))
+    );
+
+    await self.clients.claim();
+  })());
 });
 
 self.addEventListener("fetch", event => {
   const request = event.request;
 
+  // Nur lesende Anfragen der eigenen Website behandeln.
   if (
     request.method !== "GET" ||
     new URL(request.url).origin !== self.location.origin
@@ -61,37 +64,52 @@ self.addEventListener("fetch", event => {
     return;
   }
 
-  event.respondWith(
-    (async () => {
-      try {
-        const response = await fetch(request);
+  event.respondWith((async () => {
+    const cache = await caches.open(CACHE_NAME);
 
-        if (response.ok) {
-          const cache = await caches.open(CACHE_NAME);
+    try {
+      // Online: aktuelle Version laden und für offline speichern.
+      const response = await fetch(request);
+
+      if (response.ok && response.type !== "opaque") {
+        try {
           await cache.put(request, response.clone());
+        } catch (error) {
+          console.warn(
+            "Datei konnte nicht im Offline-Cache gespeichert werden:",
+            request.url,
+            error
+          );
         }
-
-        return response;
-      } catch {
-        const cached = await caches.match(request);
-
-        if (cached) return cached;
-
-        if (request.mode === "navigate") {
-          const indexUrl = new URL(
-            "./index.html",
-            self.registration.scope
-          ).href;
-
-          const offlinePage = await caches.match(indexUrl);
-          if (offlinePage) return offlinePage;
-        }
-
-        return new Response("Offline – diese Datei ist nicht gespeichert.", {
-          status: 503,
-          headers: { "Content-Type": "text/plain; charset=utf-8" }
-        });
       }
-    })()
-  );
+
+      return response;
+    } catch (error) {
+      // Offline: bereits gespeicherte Datei verwenden.
+      const cached = await caches.match(request);
+      if (cached) return cached;
+
+      // Bei Navigationen die gespeicherte App öffnen.
+      if (request.mode === "navigate") {
+        const indexUrl = new URL(
+          "./index.html",
+          self.registration.scope
+        ).href;
+
+        const indexPage = await caches.match(indexUrl);
+        if (indexPage) return indexPage;
+      }
+
+      return new Response(
+        "Diese Datei ist noch nicht offline gespeichert. " +
+        "Öffne sie einmal mit Internetverbindung und versuche es erneut.",
+        {
+          status: 503,
+          headers: {
+            "Content-Type": "text/plain; charset=utf-8"
+          }
+        }
+      );
+    }
+  })());
 });
