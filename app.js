@@ -478,7 +478,16 @@ ${cabinetButton("25.1","Niederspannung")}
     render();
   });
   $("newBtn").addEventListener("click",()=>openEditor());
-  $("importFile").addEventListener("change",e=>{if(e.target.files?.length) importCSVFiles(Array.from(e.target.files));});
+  const importFile = $("importFile");
+
+if (importFile) {
+  importFile.addEventListener("change", e => {
+    if (e.target.files?.length) {
+      importCSVFiles(Array.from(e.target.files));
+    }
+  });
+}
+  // $("importFile").addEventListener("change",e=>{if(e.target.files?.length) importCSVFiles(Array.from(e.target.files));});
   $("entryForm").addEventListener("submit",saveForm);
   $("closeDialog").addEventListener("click",()=>$("entryDialog").close());
   $("cancelBtn").addEventListener("click",()=>$("entryDialog").close());
