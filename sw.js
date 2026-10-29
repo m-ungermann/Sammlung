@@ -1,20 +1,38 @@
 
-const CACHE_NAME = "meine-pwa-v1";
+const CACHE_NAME = "physiksammlung-v2";
 
 const APP_FILES = [
   "./",
   "./index.html",
-  "./style.css",
+  "./styles.css",
+  "./inline-data.js",
   "./app.js",
   "./manifest.json",
-  "./icon.svg"
+  "./icons/icon-192.png",
+  "./icons/icon-512.png"
 ];
 
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(APP_FILES))
-      .then(() => self.skipWaiting())
+      .then(async cache => {
+        // Vorhandene Dateien einzeln zwischenspeichern.
+        // Eine fehlende optionale Datei verhindert nicht
+        // die Installation der gesamten PWA.
+        await Promise.all(
+          APP_FILES.map(async path => {
+            try {
+              const response = await fetch(path);
+              if (response.ok) {
+                await cache.put(path, response);
+              }
+            } catch (error) {
+              console.warn("Nicht zwischengespeichert:", path);
+            }
+          })
+        );
+        await self.skipWaiting();
+      })
   );
 });
 
@@ -24,7 +42,7 @@ self.addEventListener("activate", event => {
       .then(keys => Promise.all(
         keys
           .filter(key =>
-            key.startsWith("meine-pwa-") &&
+            key.startsWith("physiksammlung-") &&
             key !== CACHE_NAME
           )
           .map(key => caches.delete(key))
@@ -35,38 +53,45 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", event => {
   const request = event.request;
-  const url = new URL(request.url);
 
   if (
     request.method !== "GET" ||
-    url.origin !== self.location.origin
+    new URL(request.url).origin !== self.location.origin
   ) {
     return;
   }
 
-  if (request.mode === "navigate") {
-    event.respondWith(
-      fetch(request)
-        .then(response => {
-          if (response.ok) {
-            const copy = response.clone();
-            caches.open(CACHE_NAME)
-              .then(cache => cache.put("./index.html", copy));
-          }
-          return response;
-        })
-        .catch(async () => {
-          return (
-            await caches.match(request) ||
-            await caches.match("./index.html")
-          );
-        })
-    );
-    return;
-  }
-
   event.respondWith(
-    caches.match(request)
-      .then(cached => cached || fetch(request))
+    (async () => {
+      try {
+        const response = await fetch(request);
+
+        if (response.ok) {
+          const cache = await caches.open(CACHE_NAME);
+          await cache.put(request, response.clone());
+        }
+
+        return response;
+      } catch {
+        const cached = await caches.match(request);
+
+        if (cached) return cached;
+
+        if (request.mode === "navigate") {
+          const indexUrl = new URL(
+            "./index.html",
+            self.registration.scope
+          ).href;
+
+          const offlinePage = await caches.match(indexUrl);
+          if (offlinePage) return offlinePage;
+        }
+
+        return new Response("Offline – diese Datei ist nicht gespeichert.", {
+          status: 503,
+          headers: { "Content-Type": "text/plain; charset=utf-8" }
+        });
+      }
+    })()
   );
 });
