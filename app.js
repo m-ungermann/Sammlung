@@ -68,17 +68,15 @@
     const cfg = DATASETS[view];
     // CSV-Startdaten sind in inline-data.js eingebettet, damit file:// funktioniert.
     // Falls die eingebetteten Daten fehlen, wird als Fallback ein lokaler Server unterstützt.
-    let source = window.PHYSIKSAMMLUNG_CSV?.[cfg.file];
+    /*let source = window.PHYSIKSAMMLUNG_CSV?.[cfg.file];
     if (typeof source !== "string") {
       const response = await fetch(`data/${cfg.file}`, { cache: "no-store" });
       if (!response.ok) throw new Error(`Konnte data/${cfg.file} nicht laden (${response.status}).`);
       source = await response.text();
-    }
+    }*/
     //ab hier neu
-    const cfg = DATASETS[view];
-
+  //  const cfg = DATASETS[view];
     const source = window.PHYSIKSAMMLUNG_CSV?.[cfg.file];
-
   if (typeof source !== "string") {
     throw new Error(
       `Daten für "${cfg.file}" wurden in inline-data.js nicht gefunden.`
