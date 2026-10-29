@@ -1,0 +1,131 @@
+<!doctype html>
+
+<html lang="de">
+
+<head>
+  
+
+<meta charset="utf-8">
+ 
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ 
+ <title>Physiksammlung – Bertolt-Brecht-Schule</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+ 
+ <header class="topbar">
+  
+  <div class="brand"><div class="brand-mark">P</div>
+<div><strong>Physiksammlung der Bertolt-Brecht-Schule</strong><span>Untertite</span></div></div>
+
+  <!--<div class="top-actions">
+   
+   <label class="button secondary file-button">CSV-Dateien laden<input id="importFile" type="file" accept=".csv,text/csv" multiple></label>
+    </div>
+ -->
+ </header>
+
+  <div class="app-layout">
+   
+ 	<aside class="sidebar">
+    
+	<div class="nav-label">Menu</div>
+  
+      
+	 <button class="nav-item" data-view="sammlungsplan"><span>▤</span> Übersichtsplan</button>
+
+	 <button class="nav-item active" data-view="experimente"><span>⚗</span> Experimente</button>
+     
+	 <button class="nav-item" data-view="themen"><span>≡</span> Themen</button>
+	 <!-- <button class="nav-item" data-view="inventar"> <span>▦</span>  Inventar</button> -->
+    
+  <div class="sidebar-note">
+      
+	  <strong>Lokale Daten</strong>
+        
+	<p>Die Daten werden in diesem Browser verarbeitet.</p>
+      
+	</div>
+      
+<div class="sidebar-foot">Statische JavaScript-Anwendung</div>
+    
+</aside>
+    
+
+<main class="main">
+     
+   <section class="page-head">
+        
+	<div>
+	<p class="eyebrow">BERTOLT-BRECHT-SCHULE</p>
+	<h1 id="pageTitle">Experimente</h1><p id="pageSubtitle">Experimente suchen, anzeigen und bearbeiten.</p></div>
+     
+        <button id="newBtn" class="primary">＋ Neuer Eintrag</button>
+      
+   </section>
+      
+   <section class="toolbar">
+        
+    <div class="search-wrap"><span>⌕</span>
+    <input id="searchInput" type="search" placeholder="Suche in allen Feldern …" autocomplete="off"></div>
+       
+    <div class="result-count" id="resultCount">Daten werden geladen …</div>
+     
+   </section>
+      
+   <div id="notice" class="notice" role="status" hidden></div>
+    
+   <section id="content" class="content">
+      
+      <div class="loading">CSV-Daten werden geladen …</div>
+ 
+   </section>
+      
+   <footer><span>Die Daten werden direkt im Browser verarbeitet. Start per Doppelklick möglich.</span>
+   <span id="saveStatus">Noch keine  lokalen Änderungen</span></footer>
+    
+   </main>
+ 
+    </div>
+  
+    <dialog id="entryDialog">
+    
+    <form id="entryForm" method="dialog">
+      
+    <div class="dialog-head">
+    <div>
+     <p class="eyebrow" id="dialogEyebrow">EINTRAG</p>
+     <h2 id="dialogTitle">Eintrag bearbeiten</h2>
+     </div>
+    <button type="button" id="closeDialog" class="icon-button" aria-label="Schließen">×</button>
+    </div>
+      
+    <div id="formFields" class="form-fields"></div>
+      
+    <div class="dialog-actions"><button  type="button" id="cancelBtn" class="secondary">Abbrechen</button>
+    <button type="submit" class="primary">Speichern</button></div>
+    
+    </form>
+  
+    </dialog>
+       <dialog id="detailDialog">
+    
+     <div class="dialog-head"><div>
+      <p class="eyebrow">DETAILS</p>
+      <h2 id="detailTitle">Eintrag</h2>
+      </div>
+      <button type="button" id="closeDetail" class="icon-button" aria-label="Schließen">×</button></div>
+    
+      <div id="detailBody" class="detail-body"></div>
+  
+      </dialog>
+  
+      <script src="inline-data.js"></script>
+  <script src="app.js"></script>
+
+     </body>
+     
+</html>
