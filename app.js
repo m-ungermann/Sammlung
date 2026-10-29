@@ -74,6 +74,17 @@
       if (!response.ok) throw new Error(`Konnte data/${cfg.file} nicht laden (${response.status}).`);
       source = await response.text();
     }
+    //ab hier neu
+    const cfg = DATASETS[view];
+
+    const source = window.PHYSIKSAMMLUNG_CSV?.[cfg.file];
+
+  if (typeof source !== "string") {
+    throw new Error(
+      `Daten für "${cfg.file}" wurden in inline-data.js nicht gefunden.`
+    );
+  }
+//bis hier neu
     const parsed = parseCSV(source);
     state.originals[view] = parsed;
     let saved = null;
